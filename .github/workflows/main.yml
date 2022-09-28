@@ -9,7 +9,7 @@ on:
     branches:
     - master
   schedule:
-    - cron: '1 0 * * *'
+    - cron: '10 16 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -33,4 +33,5 @@ jobs:
           LOGINKEY: ${{ secrets.LOGINKEY }}
           SENDKEY: ${{ secrets.SENDKEY }}
           FORM_DATA: ${{ secrets.FORM_DATA }}
+          FORM_DATA_TJ_HOME: ${{ secrets.FORM_DATA_TJ_HOME }}
         run: python OUCAutoUpdate.py
